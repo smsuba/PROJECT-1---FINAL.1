@@ -1,0 +1,276 @@
+@font-face {
+  font-family: neophyte;
+  src: url(../MEDIA/FONT/Y2K_neophyte.ttf);
+}
+
+@font-face {
+  font-family: cyri;
+  src: url(../MEDIA/FONT/Cyrivendell.ttf);
+}
+
+
+.scrolling-box {
+  background-color: #eaeaea;
+  display: block;
+  width: 400px;
+  height: 200px;
+  padding: 1em;
+  overflow-y: scroll;
+  text-align:left;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+
+*, *:after, *:before {
+  box-sizing: inherit;
+}
+* {margin:0;padding:0;border: 0 none; position: relative;}
+:root {
+  --sinSerif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+html {
+  box-sizing: border-box;
+  font-family: var(--sinSerif);
+  font-size: 1rem;
+}
+
+
+.main {
+  background: #faa1e5;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 32px;
+  grid-template-areas:
+      "header header header header header header"
+      "one one one two two three"
+      "one one one four add add"
+      "card card card card card card"
+      "five five six six seven eight"
+      "nine ten six six eleven eleven"
+      "twelve twelve twelve thirteen thirteen thirteen"
+      "pie pie pie pie pie pie";
+}
+[class^='item-'] {
+  background: #B5DB84;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  padding: 20.8px;
+  box-shadow: 0 0 2px rgba(0,0,0,.8);
+}
+[class$='header'] {
+  grid-area: header;
+  background: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  flex-direction: initial;
+  min-height: initial;
+  padding: 0;
+}
+[class$='-1'] {
+  grid-area: one;
+  min-height: 90vh;
+  background: #a7cbef;
+  font-size: 1.5rem;
+} 
+[class^='item-']:not([class$='-1']) {
+  font-size:1rem;
+}
+[class$='-2'] {
+  grid-area: two;
+}
+[class$='-3'] {
+  grid-area: three;
+}
+[class$='-4'] {
+  grid-area: four;
+}
+[class$='-5'] {
+  grid-area: five;
+}
+[class$='-6'] {
+  grid-area: six;
+  
+}
+[class$='-7'] {
+  grid-area: seven;
+}
+[class$='-8'] {
+  grid-area: eight;
+}
+[class$='-9'] {
+  grid-area: nine;
+}
+[class$='-10'] {
+  grid-area: ten;
+}
+[class$='-11'] {
+  grid-area: eleven;
+}
+[class$='-12'] {
+  grid-area: twelve;
+}
+[class$='-13'] {
+  grid-area: thirteen;
+}
+
+[class$='-card'] {
+  grid-area: card;
+  flex-direction: initial;
+  font-size: 250%;
+  background: #ebb591;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+[class$='-add'] {
+  grid-area: add;
+  flex-direction: initial;
+  background: #B5DB84;
+}
+[class$='-pie'] {
+  grid-area: pie;
+  background: #B0ADD8;
+  min-height: 55vh;
+  color: #fff;
+}
+
+h1 {
+  margin: auto;
+  font-size: 60px;
+  color: beige;
+  font-family: cyri;
+}
+h2 {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+h3{
+  font-size: 15px;
+  font-family: cyri;
+}
+
+h4 {
+  font-size: 12px;
+  font-family: neophyte;
+
+    
+  }
+
+h5 {
+  font-size: 20px;
+  font-family: cyri;
+  text-align: left;
+color: #ba1895;
+}
+
+h6 {
+  font-size: 15px;
+  font-family: cyri;
+  text-align: left;
+color: #ba1895;
+}
+
+h7 {
+  font-size: 13px;
+  font-family: cyri;
+  text-align: left;
+color: #ba1895;
+}
+
+h8 {
+  font-size: 13px;
+  font-family: cyri;
+  text-align: left;
+}
+
+[class$='-card'] h2 {
+  margin: auto;
+  font-size: 200%;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  font-weight: 900;
+  font-variant: small-caps;
+  line-height: 1;
+  letter-spacing: -15px;
+  text-align: center;
+  color: rgba(0,0,0,.8);
+}
+p {
+  font-size: 105%;
+  font-weight: 200;
+  margin: 1rem 0;
+  
+  color: #fff;
+}
+img:not(class) {
+  display: block;
+  width: 100%;
+}
+.avatar {
+  width: 1500px;
+  height: 100px;
+  position: absolute;
+}
+.logo {
+  width: 20vw;
+  height: 20vw;
+}
+
+.butterfly {
+  width: 110%;
+  height: 150 px;
+}
+
+.y2kaudio{
+  width: 540px;
+  height: 70px;
+  position: center;
+  
+ }
+
+
+audio::-webkit-media-controls-panel {
+  background-color: #bd7dcd;
+}
+
+audio::-webkit-media-controls-play-button {
+  background-color: #cceacb;
+  border-radius: 50%;
+}
+
+audio::-webkit-media-controls-play-button:hover {
+  background-color: rgba(177,212,224, .7);
+}
+
+.clickme {
+  background-color:#ba1895;
+  border: none;
+  color:white;
+  padding: 15px;
+}
+
+.clickme:hover {
+  background-color:#bd7dcd;
+  cursor: pointer;
+}
+
+.color{
+  width: 300px;
+}
+
+
+
+
+
+
